@@ -1,12 +1,12 @@
 # Vault Interface
 
-**Human first entrypoint:** [AHICP Human Guide](https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.md) · [Chinese canonical](https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.zh-CN.md)
+**New to the full stack?** Start with the [AHICP homepage](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/), which explains the system from the user’s point of view and shows how to hand technical setup to an AI.
 
 **Public project homepages:** [AHICP](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) · [PPF](https://chongliuphil.github.io/Personal-Publishing-Framework/) · [Vault Interface](https://chongliuphil.github.io/Vault-interface/) · [Starter](https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/)
 
 **Ecosystem and agent entrypoint:** [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [canonical agent retrieval contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md)
 
-Public, provider-neutral metadata interfaces for project repositories that may be indexed by a private portfolio or vault.
+A provider-neutral public metadata interface for describing projects without exposing their private working state.
 
 This repository contains only reusable schemas, templates, and validators. It does **not** contain any private registry, publication queue, research notes, deployment inventory, or personal working memory.
 
@@ -14,7 +14,7 @@ This public contract participates in a default full-stack baseline of **full AHI
 
 The interface is designed to be consumed by repositories such as Academic Vault, AHICP-governed projects, PPF publishing projects, and composite starters.
 
-A private repository's identity is **not required public metadata**. The `project.repository` field is optional and may remain null unless disclosure of the repository locator has been explicitly approved.
+A private repository address is **not required public metadata**. The `project.repository` field is optional and may remain null unless that address has been explicitly approved for disclosure.
 
 See [README.zh-CN.md](README.zh-CN.md) for the canonical Chinese introduction.
 

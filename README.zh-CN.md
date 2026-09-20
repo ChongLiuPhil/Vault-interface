@@ -1,5 +1,9 @@
 # Vault Interface
 
+**公共项目主页：** [AHICP](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) · [PPF](https://chongliuphil.github.io/Personal-Publishing-Framework/) · [Vault Interface](https://chongliuphil.github.io/Vault-interface/) · [Starter](https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/)
+
+**体系与 Agent 入口：** [docs/ECOSYSTEM.zh-CN.md](docs/ECOSYSTEM.zh-CN.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [canonical Agent 调取契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.zh-CN.md)
+
 本仓库提供一组**公开、中性、可复用**的项目元数据接口，供私人 Academic Vault、AHICP 项目、PPF 项目以及综合 Starter 使用。
 
 ## 边界
@@ -21,7 +25,7 @@
 - Working Memory；
 - 私人项目关系或未公开材料。
 
-请先阅读[体系入口](docs/ECOSYSTEM.zh-CN.md)和 [`ecosystem.yaml`](ecosystem.yaml)，了解本公共元数据契约如何连接完整的 AHICP + PPF 基线以及 Starter。
+本公共契约参与的完整栈新项目默认基线是 **完整 AHICP + 完整 PPF + Vault Interface**；精简 profile 必须由人类明确选择。原创或未发布项目源文件默认保持 private，Vault Interface 只暴露经过批准的公共元数据。
 
 因此，私人 Vault 可以消费本接口，但外部项目不需要访问私人 Vault 才能采用这套体系。
 

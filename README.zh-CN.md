@@ -37,3 +37,12 @@ python tools/validate_interface.py --project project.yaml --website website.yaml
 ## 兼容性
 
 接口版本记录在 `interface-manifest.yaml`。不兼容字段语义变更必须提升 interface version，并提供迁移说明。
+
+
+## 综合采用
+
+需要把本接口与 AHICP / PPF 组合为新项目或升级既有项目时，使用：
+
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
+
+Vault Interface 继续只负责公开 metadata contract，不承担项目治理或出版生命周期。

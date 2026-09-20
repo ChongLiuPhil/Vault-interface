@@ -21,6 +21,8 @@
 - Working Memory；
 - 私人项目关系或未公开材料。
 
+请先阅读[体系入口](docs/ECOSYSTEM.zh-CN.md)和 [`ecosystem.yaml`](ecosystem.yaml)，了解本公共元数据契约如何连接完整的 AHICP + PPF 基线以及 Starter。
+
 因此，私人 Vault 可以消费本接口，但外部项目不需要访问私人 Vault 才能采用这套体系。
 
 ## 使用

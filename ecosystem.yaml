@@ -1,0 +1,14 @@
+schema_version: "1.0"
+current_component: vault_interface
+ecosystem_entrypoint: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/ECOSYSTEM.md
+repository: https://github.com/ChongLiuPhil/Vault-interface
+baseline:
+  ahicp: full-compatible-upstream
+  ppf: full-compatible-upstream
+  vault_interface: public-metadata-contract
+  continuous_web: project-dependent
+components:
+  ahicp: https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol
+  ppf: https://github.com/ChongLiuPhil/Personal-Publishing-Framework
+  starter: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
+private_state_rule: this repository contains no private registry or project content

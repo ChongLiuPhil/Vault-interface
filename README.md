@@ -7,3 +7,12 @@ This repository contains only reusable schemas, templates, and validators. It do
 The interface is designed to be consumed by repositories such as Academic Vault, AHICP-governed projects, PPF publishing projects, and composite starters.
 
 See [README.zh-CN.md](README.zh-CN.md) for the canonical Chinese introduction.
+
+
+## Composite adoption
+
+To combine this interface with AHICP and/or PPF for a new project or an existing-project upgrade, use:
+
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
+
+Vault Interface remains responsible only for the public metadata contract; it does not become the project-governance or publication-lifecycle authority.

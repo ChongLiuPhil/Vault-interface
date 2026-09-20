@@ -29,6 +29,8 @@
 
 因此，私人 Vault 可以消费本接口，但外部项目不需要访问私人 Vault 才能采用这套体系。
 
+Private repository 的标识**不是必需公共元数据**。`project.repository` 为可选字段；除非已经明确批准公开 repository locator，否则应保持 null 或省略。
+
 ## 使用
 
 复制 `templates/project.yaml` 与 `templates/website.yaml` 到项目根目录，然后运行：

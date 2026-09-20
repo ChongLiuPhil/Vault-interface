@@ -1,0 +1,31 @@
+schema_version: 1
+publish: false
+project_id: replace-with-project-id
+
+language:
+  default: auto
+  fallback: en
+  supported: [en, zh]
+  detect_from_browser: true
+
+title:
+  zh: ""
+  en: ""
+
+status:
+  zh: ""
+  en: ""
+
+summary:
+  zh: ""
+  en: ""
+
+areas: []
+featured: false
+links: []
+
+publication_notes: >
+  This file is the public-facing boundary for the project. Keep publish=false until
+  there is explicit authorization to publish. Never include private notes,
+  unpublished arguments, confidential correspondence, credentials, or material
+  that has not been approved for public release.

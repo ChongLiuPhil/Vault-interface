@@ -1,0 +1,15 @@
+schema: vault-interface/v1
+version: 1.0.0-draft
+canonical_language: zh-CN
+interfaces:
+  project:
+    schema: schemas/project.schema.json
+    template: templates/project.yaml
+  website:
+    schema: schemas/website.schema.json
+    template: templates/website.yaml
+principles:
+  - public-interface-only
+  - private-vault-state-excluded
+  - project-local-authority
+  - publication-requires-explicit-authorization

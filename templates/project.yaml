@@ -1,0 +1,33 @@
+schema_version: 1
+id: replace-with-project-id
+repository: OWNER/REPOSITORY
+
+title:
+  zh: ""
+  en: ""
+
+kind: research-project
+status: active
+started: null
+
+areas: []
+topics: []
+
+source_of_truth:
+  overview_en: README.md
+  overview_zh: README.zh-CN.md
+  manuscript: null
+  bibliography: null
+  notes: null
+
+website:
+  metadata: website.yaml
+  default_publish: false
+  bilingual_homepage_required: true
+  readme_default_language: en
+  readme_english: README.md
+  readme_chinese: README.zh-CN.md
+  language_default: auto
+  language_fallback: en
+
+notes: ""

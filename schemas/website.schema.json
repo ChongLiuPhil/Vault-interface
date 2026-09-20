@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChongLiuPhil/Vault-interface/schemas/website.schema.json",
+  "title": "Portable Project Public Website Metadata",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "publish", "title", "status", "summary", "featured", "links"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "publish": { "type": "boolean" },
+    "project_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "language": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "default": { "type": "string", "enum": ["auto", "en", "zh"] },
+        "fallback": { "type": "string", "enum": ["en", "zh"] },
+        "supported": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["en", "zh"] },
+          "uniqueItems": true
+        },
+        "detect_from_browser": { "type": "boolean" }
+      }
+    },
+    "title": { "$ref": "#/$defs/bilingualText" },
+    "status": { "$ref": "#/$defs/bilingualText" },
+    "summary": { "$ref": "#/$defs/bilingualText" },
+    "areas": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "featured": { "type": "boolean" },
+    "links": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string", "format": "uri" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["href"],
+            "properties": {
+              "href": { "type": "string", "format": "uri" },
+              "label": { "$ref": "#/$defs/bilingualText" }
+            }
+          }
+        ]
+      }
+    },
+    "publication_notes": { "type": "string" }
+  },
+  "$defs": {
+    "bilingualText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string" },
+        "en": { "type": "string" }
+      }
+    }
+  }
+}

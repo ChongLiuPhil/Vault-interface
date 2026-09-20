@@ -4,49 +4,159 @@
   "title": "Portable Project Metadata",
   "type": "object",
   "additionalProperties": true,
-  "required": ["schema_version", "id", "repository", "title", "kind", "status", "areas", "topics", "source_of_truth", "website"],
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "kind",
+    "status",
+    "areas",
+    "topics",
+    "source_of_truth",
+    "website"
+  ],
   "properties": {
-    "schema_version": { "const": 1 },
-    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-    "repository": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
-    "title": { "$ref": "#/$defs/bilingualText" },
-    "kind": { "type": "string", "minLength": 1 },
-    "status": { "type": "string", "enum": ["planned", "active", "paused", "completed", "archived"] },
-    "started": { "type": ["integer", "string", "null"] },
-    "areas": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
-    "topics": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "repository": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "description": "Optional repository locator. Omit or set null when the canonical repository is private and its identity is not approved for public disclosure."
+    },
+    "title": {
+      "$ref": "#/$defs/bilingualText"
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "active",
+        "paused",
+        "completed",
+        "archived"
+      ]
+    },
+    "started": {
+      "type": [
+        "integer",
+        "string",
+        "null"
+      ]
+    },
+    "areas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
     "source_of_truth": {
       "type": "object",
       "minProperties": 1,
-      "additionalProperties": { "type": ["string", "null"] }
+      "additionalProperties": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "website": {
       "type": "object",
       "additionalProperties": true,
-      "required": ["metadata", "default_publish"],
+      "required": [
+        "metadata",
+        "default_publish"
+      ],
       "properties": {
-        "metadata": { "type": "string", "minLength": 1 },
-        "default_publish": { "type": "boolean" },
-        "bilingual_homepage_required": { "type": "boolean" },
-        "readme_default_language": { "type": "string", "enum": ["en", "zh"] },
-        "readme_english": { "type": "string" },
-        "readme_chinese": { "type": "string" },
-        "language_default": { "type": "string", "enum": ["auto", "en", "zh"] },
-        "language_fallback": { "type": "string", "enum": ["en", "zh"] }
+        "metadata": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default_publish": {
+          "type": "boolean"
+        },
+        "bilingual_homepage_required": {
+          "type": "boolean"
+        },
+        "readme_default_language": {
+          "type": "string",
+          "enum": [
+            "en",
+            "zh"
+          ]
+        },
+        "readme_english": {
+          "type": "string"
+        },
+        "readme_chinese": {
+          "type": "string"
+        },
+        "language_default": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "en",
+            "zh"
+          ]
+        },
+        "language_fallback": {
+          "type": "string",
+          "enum": [
+            "en",
+            "zh"
+          ]
+        }
       }
     },
-    "governance": { "type": "object" },
-    "publishing": { "type": "object" },
-    "notes": { "type": ["string", "null"] }
+    "governance": {
+      "type": "object"
+    },
+    "publishing": {
+      "type": "object"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   },
   "$defs": {
     "bilingualText": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["zh", "en"],
+      "required": [
+        "zh",
+        "en"
+      ],
       "properties": {
-        "zh": { "type": "string" },
-        "en": { "type": "string" }
+        "zh": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
       }
     }
   }

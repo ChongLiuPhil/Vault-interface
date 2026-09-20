@@ -1,6 +1,6 @@
 schema_version: 1
 id: replace-with-project-id
-repository: OWNER/REPOSITORY
+repository: null  # Set OWNER/REPOSITORY only when repository identity is approved for disclosure
 
 title:
   zh: ""

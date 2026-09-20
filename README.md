@@ -12,6 +12,8 @@ This public contract participates in a default full-stack baseline of **full AHI
 
 The interface is designed to be consumed by repositories such as Academic Vault, AHICP-governed projects, PPF publishing projects, and composite starters.
 
+A private repository's identity is **not required public metadata**. The `project.repository` field is optional and may remain null unless disclosure of the repository locator has been explicitly approved.
+
 See [README.zh-CN.md](README.zh-CN.md) for the canonical Chinese introduction.
 
 

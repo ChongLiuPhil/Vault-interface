@@ -2,6 +2,8 @@
 
 Vault Interface 是与提供商无关的公共元数据契约，提供 Schema、模板和验证器；它不包含私人注册表、原创作品、出版队列、部署清单或个人工作记忆。
 
+如果第一次从人的角度了解整个体系，请先阅读 [AHICP《普通人指南》](https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.zh-CN.md)。AHICP 是人类概念入口；Starter 仍然是机器/配置入口。
+
 要完成完整配置，请先阅读 [Starter 体系入口](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/ECOSYSTEM.zh-CN.md)，再连接完整的上游层：
 
 - [AHICP 主页](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) · [仓库](https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol)

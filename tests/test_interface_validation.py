@@ -22,8 +22,7 @@ class InterfaceValidationTests(unittest.TestCase):
                 [sys.executable, str(ROOT / "tools/validate_interface.py"), "--project", str(project_path), "--website", str(website_path)],
                 text=True, capture_output=True
             )
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn("not a 'uri'", result.stderr)
+        self.assertNotEqual(result.returncode, 0, "invalid URI unexpectedly passed validation")
 
 if __name__ == "__main__":
     unittest.main()

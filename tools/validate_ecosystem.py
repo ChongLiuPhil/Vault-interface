@@ -31,6 +31,16 @@ def main() -> int:
     page = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     if '<main id="zh" class="lang active">' not in page:
         raise SystemExit("Vault Interface homepage must keep Chinese visible as a no-JavaScript fallback")
+    required_homepage_markers = [
+        "私人项目状态",
+        "公共项目描述",
+        "Schema + Validator",
+        "https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/",
+    ]
+    for marker in required_homepage_markers:
+        if marker not in page:
+            raise SystemExit(f"homepage is missing required architecture/discovery marker: {marker}")
+
     scripts = re.findall(r"<script>(.*?)</script>", page, flags=re.DOTALL)
     if not scripts:
         raise SystemExit("Vault Interface homepage has no inline script to validate")

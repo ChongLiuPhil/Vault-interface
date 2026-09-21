@@ -1,0 +1,45 @@
+# Inquiry Publishing Stack — Vault Interface entrypoint
+
+Current component: Vault Interface
+Role: provider-neutral public metadata contract. This repository is not a private vault or private control plane.
+
+Human conceptual entrypoint:
+https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+Human Guide:
+https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.md
+
+Machine/configuration entrypoint:
+https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/
+Machine descriptor:
+https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/entry.json
+Machine-readable ecosystem:
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/ecosystem.yaml
+
+Canonical ecosystem:
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/ECOSYSTEM.md
+Machine-readable ecosystem:
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/ecosystem.yaml
+Agent retrieval contract:
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md
+Cloudflare operational contract:
+https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.md
+
+Public homepages:
+- AHICP: https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+- PPF: https://chongliuphil.github.io/Personal-Publishing-Framework/
+- Vault Interface: https://chongliuphil.github.io/Vault-interface/
+- Starter: https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/
+
+Default full-stack adoption:
+full AHICP + full PPF + Vault Interface + project-owned content.
+
+Privacy boundary:
+Vault Interface exposes only approved public metadata. Original or unpublished project source remains private by default. Continuous Web may be prepared as restricted/authenticated until explicit human public-release authorization. Public links never authorize private-state retrieval.
+
+Agent instruction:
+Reconstruct the four-component ecosystem before cross-component configuration. For Cloudflare work, follow the shared operational contract and relevant PPF provider runbooks; when human UI action is required, give numbered operator steps, secret boundaries, completion evidence, verification, and rollback.
+
+Public delivery migration:
+For the four public framework sites, Cloudflare Pages is preferred and GitHub remains canonical source. Current GitHub Pages URLs remain authoritative until verified Cloudflare/custom-domain cutover.
+Migration guide: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md
+Migration state: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/templates/cloudflare-public-delivery.yaml

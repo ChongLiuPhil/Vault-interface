@@ -13,3 +13,4 @@ principles:
   - private-vault-state-excluded
   - project-local-authority
   - publication-requires-explicit-authorization
+  - private-repository-locator-is-optional

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vault Interface · Public Project Metadata</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#22282a;background:#edf2f1}
+*{box-sizing:border-box}body{margin:0;line-height:1.75;background:linear-gradient(180deg,#edf2f1,#f8faf9 55%,#e9eef4)}
+.shell{max-width:1080px;margin:auto;padding:26px 18px 62px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-weight:800;letter-spacing:.02em}.switch{display:flex;gap:8px}.switch button{border:1px solid #728b92;background:#fff;border-radius:999px;padding:8px 14px;color:#244c55;font-weight:700;cursor:pointer}.switch button.active{background:#244c55;color:#fff}
+.lang{display:none}.lang.active{display:block}.hero,section.block{background:#fff;border:1px solid #d6e0e1;border-radius:22px;padding:34px;margin-top:18px;box-shadow:0 10px 28px #19353c0c}.hero{background:#244c55;color:#fff;border-color:#244c55;padding:50px 38px}.eyebrow{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;opacity:.78}.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;max-width:900px;margin:14px 0 22px}.lead{font-size:1.18rem;max-width:860px;opacity:.93}
+h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#244c55}h3{margin:0 0 7px;color:#244c55}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{border:1px solid #dce5e7;border-radius:16px;padding:19px;background:#fbfdfd}.card p{margin:0}
+.flow{display:grid;gap:8px;margin:22px 0}.flow-row{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:17px 19px;border:1px solid #dae4e6;border-radius:15px;background:#fbfdfd}.flow-row strong{color:#244c55}.arrow{text-align:center;color:#718f97;font-weight:800}.boundary{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:20px;border-radius:16px;border:1px solid #dbe4e5;background:#fff}.panel.private{background:#f6f7f7}.panel.public{background:#f1f7f8}.quote{padding:18px 21px;background:#f0f6f6;border-left:5px solid #668994;border-radius:0 14px 14px 0;font-size:1.08rem}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px}a{color:#244c55;font-weight:700}.small{font-size:.94rem;color:#68757a}footer{padding:22px 4px;color:#68757a;font-size:.9rem}
+@media(max-width:680px){.shell{padding:16px 12px 40px}.top{align-items:flex-start;flex-direction:column}.hero,section.block{padding:25px 21px}.boundary{grid-template-columns:1fr}.flow-row{grid-template-columns:1fr;gap:5px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="top"><div class="brand">Vault Interface</div><div class="switch"><button id="zhBtn" type="button">中文</button><button id="enBtn" type="button">English</button></div></div>
+
+  <main id="zh" class="lang active">
+    <div class="hero">
+      <div class="eyebrow">Public project metadata</div>
+      <h1>只公开项目需要被看见的那部分信息。</h1>
+      <p class="lead">Vault Interface 为项目提供一套稳定、可验证、与具体平台无关的公共描述方式。私人研究、工作记录、未发布作品、部署信息和凭据继续留在私人空间；公共接口只暴露经过确认、适合公开的最小元数据。</p>
+    </div>
+
+    <section class="block">
+      <h2>第一次接触整个体系？</h2>
+      <p>如果你还不知道 AHICP、PPF、Vault Interface 和 Starter 怎样配合，可以先从 <a href="https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/">AHICP 介绍页</a>开始。那里从使用者角度解释整套体系，并说明怎样让 AI 继续完成技术配置。</p>
+    </section>
+
+    <section class="block">
+      <h2>核心思想：公共描述不等于公开整个项目</h2>
+      <div class="boundary">
+        <div class="panel private"><h3>私人项目状态</h3><p>研究笔记、Working Memory、未发布手稿、私有仓库位置、部署清单、访问凭据、内部决策和其他不应公开的信息。</p></div>
+        <div class="panel public"><h3>公共项目描述</h3><p>项目名称、简介、公共网站、发布状态、兼容信息，以及其他明确允许公开的字段。</p></div>
+      </div>
+      <div class="quote">Vault Interface 的作用不是“把私人 Vault 搬到公共网络”，而是定义一层最小、清楚、可验证的公共投影。</div>
+    </section>
+
+    <section class="block">
+      <h2>这层接口怎样工作</h2>
+      <div class="flow">
+        <div class="flow-row"><strong>1 · 私人项目</strong><div>项目内部保留完整内容、工作状态、来源、部署信息和必要的私人记录。</div></div>
+        <div class="arrow">↓ 只选择允许公开的字段</div>
+        <div class="flow-row"><strong>2 · 公共元数据</strong><div>使用统一 Schema 描述项目和网站。私有仓库地址等敏感定位信息可以省略，不是必填项。</div></div>
+        <div class="arrow">↓ 验证</div>
+        <div class="flow-row"><strong>3 · Schema + Validator</strong><div>模板和验证器检查字段结构，减少不同项目各写一套格式造成的漂移。</div></div>
+        <div class="arrow">↓</div>
+        <div class="flow-row"><strong>4 · 公共发现</strong><div>网站、索引、Portfolio、AI 或其他工具可以读取同一套公开信息，而不需要访问私人项目状态。</div></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>为什么要与具体平台解耦</h2>
+      <div class="grid">
+        <div class="card"><h3>平台可以更换</h3><p>公共描述不绑定某一家 Vault、云平台、发布服务或数据库。</p></div>
+        <div class="card"><h3>公开字段保持稳定</h3><p>即使后台实现变化，对外的项目描述仍可以保持一致。</p></div>
+        <div class="card"><h3>最小披露</h3><p>只要求公共使用真正需要的字段，不为了“完整”而公开私人标识或内部状态。</p></div>
+        <div class="card"><h3>自动检查</h3><p>Schema 和验证器让机器能够检查格式，同时保留项目决定哪些内容可以公开的边界。</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>在整个体系中的位置</h2>
+      <div class="grid">
+        <div class="card"><h3>AHICP</h3><p>管理探究、证据、决定、项目记忆和 AI 协作。</p></div>
+        <div class="card"><h3>PPF</h3><p>管理源内容、构建、发布、版本和归档。</p></div>
+        <div class="card"><h3>Vault Interface</h3><p>把允许公开的项目信息投射成统一、可验证的公共描述。</p></div>
+        <div class="card"><h3>Starter</h3><p>让 AI 组合、采用和升级这些独立组件。</p></div>
+      </div>
+      <p class="links"><a href="https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/">AHICP</a><a href="https://chongliuphil.github.io/Personal-Publishing-Framework/">PPF</a><a href="https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/">Starter</a><a href="https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/">AI 配置入口</a></p>
+    </section>
+
+    <section class="block">
+      <h2>进一步了解</h2>
+      <p class="links"><a href="https://github.com/ChongLiuPhil/Vault-interface">GitHub 仓库</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/README.zh-CN.md">中文说明</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/schemas/project.schema.json">项目 Schema</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/tools/validate_interface.py">验证器</a></p>
+      <p class="small">阅读公共元数据不会授予私人仓库、私人工作状态或部署系统的访问权限。</p>
+    </section>
+  </main>
+
+  <main id="en" class="lang">
+    <div class="hero">
+      <div class="eyebrow">Public project metadata</div>
+      <h1>Publish only the part of a project that needs to be visible.</h1>
+      <p class="lead">Vault Interface gives projects a stable, validated, provider-neutral way to describe themselves publicly. Private research, working state, unpublished work, deployment details, and credentials stay private; the public interface exposes only the metadata that has been approved for disclosure.</p>
+    </div>
+
+    <section class="block">
+      <h2>New to the full stack?</h2>
+      <p>If AHICP, PPF, Vault Interface, and Starter are unfamiliar, begin with the <a href="https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/">AHICP introduction</a>. It explains the system from the user’s point of view and shows how to hand technical setup to an AI.</p>
+    </section>
+
+    <section class="block">
+      <h2>The core idea: a public description is not the whole project</h2>
+      <div class="boundary">
+        <div class="panel private"><h3>Private project state</h3><p>Research notes, Working Memory, unpublished manuscripts, private repository locations, deployment inventory, credentials, internal decisions, and anything else that should stay private.</p></div>
+        <div class="panel public"><h3>Public project description</h3><p>Project name, summary, public website, publication state, compatibility information, and other fields that have been explicitly approved for public use.</p></div>
+      </div>
+      <div class="quote">Vault Interface does not move a private vault onto the public web. It defines a small, explicit, validated public projection of a project.</div>
+    </section>
+
+    <section class="block">
+      <h2>How the interface works</h2>
+      <div class="flow">
+        <div class="flow-row"><strong>1 · Private project</strong><div>The project keeps its full content, working state, sources, deployment information, and private records internally.</div></div>
+        <div class="arrow">↓ select only fields approved for disclosure</div>
+        <div class="flow-row"><strong>2 · Public metadata</strong><div>A shared schema describes the project and website. Sensitive locators, such as a private repository address, can be omitted.</div></div>
+        <div class="arrow">↓ validate</div>
+        <div class="flow-row"><strong>3 · Schema + validator</strong><div>Templates and validators check the structure so projects do not drift into incompatible one-off formats.</div></div>
+        <div class="arrow">↓</div>
+        <div class="flow-row"><strong>4 · Public discovery</strong><div>Websites, indexes, portfolios, AI systems, or other tools can read the same public description without access to private project state.</div></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Why the interface is provider-neutral</h2>
+      <div class="grid">
+        <div class="card"><h3>Providers can change</h3><p>The public contract is not tied to one vault product, cloud platform, publishing service, or database.</p></div>
+        <div class="card"><h3>Public fields stay stable</h3><p>Back-end implementation can change without forcing every public consumer to learn a new project format.</p></div>
+        <div class="card"><h3>Minimize disclosure</h3><p>Only fields that public consumers actually need are required. Private identifiers are not exposed merely for completeness.</p></div>
+        <div class="card"><h3>Validate automatically</h3><p>Schemas and validators make the format machine-checkable while the project still decides what may be disclosed.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Where Vault Interface fits in the stack</h2>
+      <div class="grid">
+        <div class="card"><h3>AHICP</h3><p>Handles inquiry, evidence, decisions, project memory, and AI collaboration.</p></div>
+        <div class="card"><h3>PPF</h3><p>Handles source, build, publication, releases, and archive.</p></div>
+        <div class="card"><h3>Vault Interface</h3><p>Projects the information approved for disclosure into a shared, validated public description.</p></div>
+        <div class="card"><h3>Starter</h3><p>Lets an AI compose, adopt, and upgrade the independent components.</p></div>
+      </div>
+      <p class="links"><a href="https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/">AHICP</a><a href="https://chongliuphil.github.io/Personal-Publishing-Framework/">PPF</a><a href="https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/">Starter</a><a href="https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/">Machine entry for AI</a></p>
+    </section>
+
+    <section class="block">
+      <h2>Go deeper</h2>
+      <p class="links"><a href="https://github.com/ChongLiuPhil/Vault-interface">GitHub repository</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/README.md">Repository guide</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/schemas/project.schema.json">Project schema</a><a href="https://github.com/ChongLiuPhil/Vault-interface/blob/main/tools/validate_interface.py">Validator</a></p>
+      <p class="small">Reading public metadata never grants access to a private repository, private working state, or deployment systems.</p>
+    </section>
+  </main>
+
+  <footer>Public metadata interface · Public-benefit noncommercial licensing · Private project state remains outside this repository.</footer>
+</div>
+<script>
+const zh=document.getElementById('zh'),en=document.getElementById('en'),zhBtn=document.getElementById('zhBtn'),enBtn=document.getElementById('enBtn');
+function setLang(lang){const isZh=lang==='zh';zh.classList.toggle('active',isZh);en.classList.toggle('active',!isZh);zhBtn.classList.toggle('active',isZh);enBtn.classList.toggle('active',!isZh);document.documentElement.lang=isZh?'zh-CN':'en';try{localStorage.setItem('vault-interface-lang',lang)}catch(e){}}
+let saved=null;try{saved=localStorage.getItem('vault-interface-lang')}catch(e){}setLang(saved||((navigator.language||'').toLowerCase().startsWith('zh')?'zh':'en'));
+zhBtn.addEventListener('click',()=>setLang('zh'));enBtn.addEventListener('click',()=>setLang('en'));
+</script>
+</body>
+</html>

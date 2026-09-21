@@ -1,0 +1,57 @@
+schema_version: "1.1"
+current_component: vault_interface
+human_entrypoint:
+  role: human-conceptual-entry
+  current_public_landing: https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+  delivery_provider: github-pages
+  provider_may_change: true
+  homepage: https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+  guide_zh_cn: https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.zh-CN.md
+  guide_en: https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.md
+machine_entrypoint:
+  role: composition-and-configuration-entry
+  public_landing: https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/
+  descriptor: https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/entry.json
+  ecosystem: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/ecosystem.yaml
+  agent_retrieval_contract: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md
+ecosystem_entrypoint: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/ECOSYSTEM.md
+agent_retrieval_contract: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md
+llms_entrypoint: https://chongliuphil.github.io/Vault-interface/llms.txt
+homepage: https://chongliuphil.github.io/Vault-interface/
+repository: https://github.com/ChongLiuPhil/Vault-interface
+role: provider-neutral public metadata contract
+public_delivery:
+  canonical_source_provider: github
+  current_provider: github-pages
+  preferred_provider: cloudflare-pages
+  migration_state: prepared-provider-authorization-required
+  migration_plan: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/templates/cloudflare-public-delivery.yaml
+  migration_guide: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md
+  cutover_rule: keep-current-public-urls-until-verified-cloudflare-deployment
+baseline:
+  default_profile: full-research-publication
+  ahicp: full-compatible-upstream
+  ppf: full-compatible-upstream
+  vault_interface: public-metadata-contract
+  continuous_web: required-for-published-projects
+  source_visibility: private-by-default-for-original-work
+  web_visibility: restricted-by-default-for-unpublished-work
+  cloudflare_access: required-for-private-or-transitional-publications
+  reduced_profiles: explicit-human-selection-only
+components:
+  ahicp:
+    homepage: https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+    repository: https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol
+  ppf:
+    homepage: https://chongliuphil.github.io/Personal-Publishing-Framework/
+    repository: https://github.com/ChongLiuPhil/Personal-Publishing-Framework
+  vault_interface:
+    homepage: https://chongliuphil.github.io/Vault-interface/
+    repository: https://github.com/ChongLiuPhil/Vault-interface
+  starter:
+    homepage: https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/
+    repository: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
+private_state_rule: this repository contains no private registry or project content
+fetch_private_state: only-after-explicit-human-authorization
+public_links_grant_private_access: false
+cloudflare_guide: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.md

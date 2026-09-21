@@ -12,6 +12,10 @@ For a complete configuration, follow the [Starter ecosystem entrypoint](https://
 
 The default full-stack baseline for a new project is **full AHICP + full PPF + Vault Interface**, with this repository providing only the public metadata adapter. Reduced profiles require explicit human selection. Private project state must remain in the project's private control plane. Original or unpublished canonical source is private by default, while Continuous Web may be prepared in a restricted/authenticated state.
 
+For the four public framework sites, Cloudflare Pages is the preferred delivery provider while GitHub remains the canonical source/version-control provider. The current GitHub Pages URLs remain authoritative until the coordinated migration verifies Cloudflare staging, target domains, and cross-project links. Vault Interface's public metadata contract remains provider-neutral; choosing Cloudflare for current site delivery does not make Cloudflare part of the metadata contract.
+
+Use the [coordinated public-delivery migration guide](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md) for the framework sites.
+
 Continuous Web and Cloudflare are project-level publication concerns. Before deployment, read the [operational guide](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.md); this repository does not grant access to any private content or provider account.
 
 For cross-component work, read the [canonical agent retrieval contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md). Public links support ecosystem reconstruction; they do not authorize private-state access. If Cloudflare requires human UI action, the agent must provide numbered operator-level steps, completion evidence, verification, and rollback.

@@ -20,6 +20,16 @@ def main() -> int:
     manifest = yaml.safe_load((ROOT / "ecosystem.yaml").read_text())
     if not isinstance(manifest, dict) or "ecosystem_entrypoint" not in manifest:
         raise SystemExit("ecosystem.yaml is missing ecosystem_entrypoint")
+    public_delivery = manifest.get("public_delivery")
+    if not isinstance(public_delivery, dict):
+        raise SystemExit("ecosystem.yaml is missing public_delivery")
+    if public_delivery.get("current_provider") != "github-pages":
+        raise SystemExit("Vault must keep GitHub Pages current before verified cutover")
+    if public_delivery.get("preferred_provider") != "cloudflare-pages":
+        raise SystemExit("Vault preferred public delivery must be Cloudflare Pages")
+    if public_delivery.get("cutover_rule") != "keep-current-public-urls-until-verified-cloudflare-deployment":
+        raise SystemExit("Vault public URL cutover rule is missing or unsafe")
+
     manifest_text = (ROOT / "ecosystem.yaml").read_text()
     for repository in CORE_REPOSITORIES:
         if repository not in manifest_text:

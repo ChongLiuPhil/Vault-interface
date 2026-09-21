@@ -1,8 +1,8 @@
 # Vault Interface in the Inquiry Publishing Stack
 
-Vault Interface is the provider-neutral public metadata contract. It supplies schemas, templates, and validators; it does not contain a private registry, original work, publication queue, deployment inventory, or personal working memory.
+Vault Interface defines a provider-neutral public description of a project. It supplies schemas, templates, and validators, but does not contain private registries, original work, publication queues, deployment inventories, or Working Memory.
 
-For a non-technical human introduction to the full ecosystem, start with the [AHICP Human Guide](https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.md). AHICP is the human conceptual entrypoint; Starter remains the machine/configuration entrypoint.
+If the full stack is new to you, start with the [AHICP homepage](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/). For project setup, adoption, or upgrades, an AI should enter through Starter’s machine entrypoint.
 
 For a complete configuration, follow the [Starter ecosystem entrypoint](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/ECOSYSTEM.md), then connect the full upstream layers:
 

@@ -38,3 +38,8 @@ Vault Interface exposes only approved public metadata. Original or unpublished p
 
 Agent instruction:
 Reconstruct the four-component ecosystem before cross-component configuration. For Cloudflare work, follow the shared operational contract and relevant PPF provider runbooks; when human UI action is required, give numbered operator steps, secret boundaries, completion evidence, verification, and rollback.
+
+Public delivery migration:
+For the four public framework sites, Cloudflare Pages is preferred and GitHub remains canonical source. Current GitHub Pages URLs remain authoritative until verified Cloudflare/custom-domain cutover.
+Migration guide: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md
+Migration state: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/templates/cloudflare-public-delivery.yaml

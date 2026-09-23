@@ -1,8 +1,8 @@
 # Vault Interface
 
-**第一次了解整个体系：** 从 [AHICP 主页](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) 开始；那里提供完整使用指南，并说明怎样把后续技术配置交给 AI。
+**第一次了解整个体系：** 从 [AHICP 主页](https://inquirystack.philohub.workers.dev/) 开始；那里提供完整使用指南，并说明怎样把后续技术配置交给 AI。
 
-**公共项目主页：** [AHICP](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) · [PPF](https://chongliuphil.github.io/Personal-Publishing-Framework/) · [Vault Interface](https://chongliuphil.github.io/Vault-interface/) · [Starter](https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/)
+**公共项目主页：** [AHICP](https://inquirystack.philohub.workers.dev/) · [PPF](https://inquirystack.philohub.workers.dev/ppf/) · [Vault Interface](https://inquirystack.philohub.workers.dev/vault-interface/) · [Starter](https://inquirystack.philohub.workers.dev/starter/)
 
 **体系与 AI 配置入口：** [docs/ECOSYSTEM.zh-CN.md](docs/ECOSYSTEM.zh-CN.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [权威 Agent 调取契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.zh-CN.md)
 

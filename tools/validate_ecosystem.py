@@ -23,11 +23,11 @@ def main() -> int:
     public_delivery = manifest.get("public_delivery")
     if not isinstance(public_delivery, dict):
         raise SystemExit("ecosystem.yaml is missing public_delivery")
-    if public_delivery.get("current_provider") != "github-pages":
-        raise SystemExit("Vault must keep GitHub Pages current before verified cutover")
-    if public_delivery.get("preferred_provider") != "cloudflare-pages":
-        raise SystemExit("Vault preferred public delivery must be Cloudflare Pages")
-    if public_delivery.get("cutover_rule") != "keep-current-public-urls-until-verified-cloudflare-deployment":
+    if public_delivery.get("current_provider") != "cloudflare-workers":
+        raise SystemExit("Vault must record the approved Workers cutover")
+    if public_delivery.get("preferred_provider") != "cloudflare-workers":
+        raise SystemExit("Vault preferred public delivery must be Cloudflare Workers")
+    if public_delivery.get("cutover_rule") != "workers-dev-canonical-after-verified-human-approved-cutover":
         raise SystemExit("Vault public URL cutover rule is missing or unsafe")
 
     manifest_text = (ROOT / "ecosystem.yaml").read_text()
@@ -45,7 +45,7 @@ def main() -> int:
         "私人项目状态",
         "公共项目描述",
         "Schema + Validator",
-        "https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/",
+        "https://inquirystack.philohub.workers.dev/agent/",
     ]
     for marker in required_homepage_markers:
         if marker not in page:

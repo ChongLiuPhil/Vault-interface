@@ -12,7 +12,7 @@ Vault Interface 提供一套与平台无关的公共元数据接口，包括 Sch
 
 完整栈新项目的默认基线是 **完整 AHICP + 完整 PPF + Vault Interface**，本仓库只提供公共元数据适配层。精简配置（profile）必须由使用者明确选择。私人项目状态继续保留在项目自己的私有空间中。原创或未发布源内容默认 private，同时可以准备 restricted/authenticated 的 Continuous Web。
 
-四个公共框架栏目现以 https://inquirystack.philohub.workers.dev/ 的 Cloudflare Worker 为正式入口，GitHub 继续作为权威源文件、版本历史和 CI 平台。原 GitHub Pages URL 保留为旧入口。Vault Interface 的公共元数据接口仍然保持 provider-neutral；当前选择 Cloudflare 承载网页，并不意味着 Cloudflare 成为元数据契约的一部分。
+四个公共框架栏目现以 https://inquirystack.philohub.workers.dev/ 的 Cloudflare Worker 为正式入口，GitHub 继续作为权威源文件、版本历史和 CI 平台。原框架 GitHub Pages 站点已停用。Vault Interface 的公共元数据接口仍然保持 provider-neutral；当前选择 Cloudflare 承载网页，并不意味着 Cloudflare 成为元数据契约的一部分。
 
 四个框架站点的迁移遵循 [Cloudflare 公共站点迁移说明](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.zh-CN.md)。
 

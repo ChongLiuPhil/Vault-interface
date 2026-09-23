@@ -23,7 +23,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <div class="hero">
       <div class="eyebrow">Public project metadata</div>
       <h1>只公开项目需要被看见的那部分信息。</h1>
-      <p class="lead">Vault Interface 为项目提供一套稳定、可验证、与具体平台无关的公共描述方式。私人研究、工作记录、未发布作品、部署信息和凭据继续留在私人空间；公共接口只暴露经过确认、适合公开的最小元数据。</p>
+      <p class="lead">Vault Interface 为项目提供一套稳定、可验证、与具体平台无关的公共描述方式。私人研究、工作记录、未发布作品、私有部署清单、提供商账户状态、凭据及其他未批准公开的运维信息继续留在私人空间；公共接口只暴露经过确认、适合公开的最小元数据。非敏感的构建来源、版本或发布状态可以在项目明确批准后公开。</p>
     </div>
 
     <section class="block">
@@ -34,8 +34,8 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <section class="block">
       <h2>核心思想：公共描述不等于公开整个项目</h2>
       <div class="boundary">
-        <div class="panel private"><h3>私人项目状态</h3><p>研究笔记、Working Memory、未发布手稿、私有仓库位置、部署清单、访问凭据、内部决策和其他不应公开的信息。</p></div>
-        <div class="panel public"><h3>公共项目描述</h3><p>项目名称、简介、公共网站、发布状态、兼容信息，以及其他明确允许公开的字段。</p></div>
+        <div class="panel private"><h3>私人项目状态</h3><p>研究笔记、Working Memory、未发布手稿、私有仓库位置、私有部署清单、提供商账户状态、访问凭据、内部决策和其他未批准公开的信息。</p></div>
+        <div class="panel public"><h3>公共项目描述</h3><p>当前 Schema 的核心必填字段包括项目 ID、双语标题、类型、状态、领域、主题、<code>source_of_truth</code> 与 <code>website</code>。其他字段只有在 Schema 允许且项目明确批准时才公开；私有仓库地址可以省略。</p></div>
       </div>
       <div class="quote">Vault Interface 的作用不是“把私人 Vault 搬到公共网络”，而是定义一层最小、清楚、可验证的公共投影。</div>
     </section>
@@ -43,7 +43,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <section class="block">
       <h2>这层接口怎样工作</h2>
       <div class="flow">
-        <div class="flow-row"><strong>1 · 私人项目</strong><div>项目内部保留完整内容、工作状态、来源、部署信息和必要的私人记录。</div></div>
+        <div class="flow-row"><strong>1 · 私人项目</strong><div>项目内部保留完整内容、工作状态、来源，以及不应公开的部署与提供商状态；经批准的非敏感构建或发布元数据可以进入公共投影。</div></div>
         <div class="arrow">↓ 只选择允许公开的字段</div>
         <div class="flow-row"><strong>2 · 公共元数据</strong><div>使用统一 Schema 描述项目和网站。私有仓库地址等敏感定位信息可以省略，不是必填项。</div></div>
         <div class="arrow">↓ 验证</div>
@@ -85,7 +85,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <div class="hero">
       <div class="eyebrow">Public project metadata</div>
       <h1>Publish only the part of a project that needs to be visible.</h1>
-      <p class="lead">Vault Interface gives projects a stable, validated, provider-neutral way to describe themselves publicly. Private research, working state, unpublished work, deployment details, and credentials stay private; the public interface exposes only the metadata that has been approved for disclosure.</p>
+      <p class="lead">Vault Interface gives projects a stable, validated, provider-neutral way to describe themselves publicly. Private research, working state, unpublished work, private deployment inventory, provider-account state, credentials, and other unapproved operational details stay private; the public interface exposes only metadata approved for disclosure. Non-sensitive build provenance, versions, or publication state may be public when the project explicitly approves them.</p>
     </div>
 
     <section class="block">
@@ -96,8 +96,8 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <section class="block">
       <h2>The core idea: a public description is not the whole project</h2>
       <div class="boundary">
-        <div class="panel private"><h3>Private project state</h3><p>Research notes, Working Memory, unpublished manuscripts, private repository locations, deployment inventory, credentials, internal decisions, and anything else that should stay private.</p></div>
-        <div class="panel public"><h3>Public project description</h3><p>Project name, summary, public website, publication state, compatibility information, and other fields that have been explicitly approved for public use.</p></div>
+        <div class="panel private"><h3>Private project state</h3><p>Research notes, Working Memory, unpublished manuscripts, private repository locations, private deployment inventory, provider-account state, credentials, internal decisions, and anything else not approved for disclosure.</p></div>
+        <div class="panel public"><h3>Public project description</h3><p>The current schema requires core fields including project ID, bilingual title, kind, status, areas, topics, <code>source_of_truth</code>, and <code>website</code>. Other fields are public only when the schema permits them and the project explicitly approves disclosure; a private repository locator may be omitted.</p></div>
       </div>
       <div class="quote">Vault Interface does not move a private vault onto the public web. It defines a small, explicit, validated public projection of a project.</div>
     </section>
@@ -105,7 +105,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.25rem);line-height:1.2;margin:0 0 16px;color:#
     <section class="block">
       <h2>How the interface works</h2>
       <div class="flow">
-        <div class="flow-row"><strong>1 · Private project</strong><div>The project keeps its full content, working state, sources, deployment information, and private records internally.</div></div>
+        <div class="flow-row"><strong>1 · Private project</strong><div>The project keeps full content, working state, sources, and non-public deployment/provider state internally; approved non-sensitive build or publication metadata may be included in the public projection.</div></div>
         <div class="arrow">↓ select only fields approved for disclosure</div>
         <div class="flow-row"><strong>2 · Public metadata</strong><div>A shared schema describes the project and website. Sensitive locators, such as a private repository address, can be omitted.</div></div>
         <div class="arrow">↓ validate</div>

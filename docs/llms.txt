@@ -4,14 +4,14 @@ Current component: Vault Interface
 Role: provider-neutral public metadata contract. This repository is not a private vault or private control plane.
 
 Human conceptual entrypoint:
-https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
+https://inquirystack.philohub.workers.dev/
 Human Guide:
 https://github.com/ChongLiuPhil/AI-Assisted-Human-Inquiry-and-Creation-Protocol/blob/main/docs/HUMAN_GUIDE.md
 
 Machine/configuration entrypoint:
-https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/
+https://inquirystack.philohub.workers.dev/agent/
 Machine descriptor:
-https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/agent/entry.json
+https://inquirystack.philohub.workers.dev/agent/entry.json
 Machine-readable ecosystem:
 https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/ecosystem.yaml
 
@@ -25,10 +25,10 @@ Cloudflare operational contract:
 https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.md
 
 Public homepages:
-- AHICP: https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/
-- PPF: https://chongliuphil.github.io/Personal-Publishing-Framework/
-- Vault Interface: https://chongliuphil.github.io/Vault-interface/
-- Starter: https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/
+- AHICP: https://inquirystack.philohub.workers.dev/
+- PPF: https://inquirystack.philohub.workers.dev/ppf/
+- Vault Interface: https://inquirystack.philohub.workers.dev/vault-interface/
+- Starter: https://inquirystack.philohub.workers.dev/starter/
 
 Default full-stack adoption:
 full AHICP + full PPF + Vault Interface + project-owned content.
@@ -40,6 +40,6 @@ Agent instruction:
 Reconstruct the four-component ecosystem before cross-component configuration. For Cloudflare work, follow the shared operational contract and relevant PPF provider runbooks; when human UI action is required, give numbered operator steps, secret boundaries, completion evidence, verification, and rollback.
 
 Public delivery migration:
-For the four public framework sites, Cloudflare Pages is preferred and GitHub remains canonical source. Current GitHub Pages URLs remain authoritative until verified Cloudflare/custom-domain cutover.
+The four public framework sections now use one verified Cloudflare Worker at https://inquirystack.philohub.workers.dev/. GitHub remains canonical source; former GitHub Pages URLs remain available as legacy entrypoints.
 Migration guide: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md
 Migration state: https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/templates/cloudflare-public-delivery.yaml

@@ -1,8 +1,8 @@
 # Vault Interface
 
-**New to the full stack?** Start with the [AHICP homepage](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/), which explains the system from the user’s point of view and shows how to hand technical setup to an AI.
+**New to the full stack?** Start with the [AHICP homepage](https://inquirystack.philohub.workers.dev/), which explains the system from the user’s point of view and shows how to hand technical setup to an AI.
 
-**Public project homepages:** [AHICP](https://chongliuphil.github.io/AI-Assisted-Human-Inquiry-and-Creation-Protocol/) · [PPF](https://chongliuphil.github.io/Personal-Publishing-Framework/) · [Vault Interface](https://chongliuphil.github.io/Vault-interface/) · [Starter](https://chongliuphil.github.io/Inquiry-Publishing-Project-Starter/)
+**Public project homepages:** [AHICP](https://inquirystack.philohub.workers.dev/) · [PPF](https://inquirystack.philohub.workers.dev/ppf/) · [Vault Interface](https://inquirystack.philohub.workers.dev/vault-interface/) · [Starter](https://inquirystack.philohub.workers.dev/starter/)
 
 **Ecosystem and agent entrypoint:** [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [canonical agent retrieval contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md)
 

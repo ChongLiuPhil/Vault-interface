@@ -12,7 +12,7 @@ For a complete configuration, follow the [Starter ecosystem entrypoint](https://
 
 The default full-stack baseline for a new project is **full AHICP + full PPF + Vault Interface**, with this repository providing only the public metadata adapter. Reduced profiles require explicit human selection. Private project state must remain in the project's private control plane. Original or unpublished canonical source is private by default, while Continuous Web may be prepared in a restricted/authenticated state.
 
-The four public framework sections now use the verified canonical Cloudflare Worker at https://inquirystack.philohub.workers.dev/, while GitHub remains the canonical source/version-control provider. Former GitHub Pages URLs remain available as legacy entrypoints. Vault Interface's public metadata contract remains provider-neutral; choosing Cloudflare for current site delivery does not make Cloudflare part of the metadata contract.
+The four public framework sections now use the verified canonical Cloudflare Worker at https://inquirystack.philohub.workers.dev/, while GitHub remains the canonical source/version-control provider. The former framework GitHub Pages sites have been retired. Vault Interface's public metadata contract remains provider-neutral; choosing Cloudflare for current site delivery does not make Cloudflare part of the metadata contract.
 
 Use the [coordinated public-delivery migration guide](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.md) for the framework sites.
 

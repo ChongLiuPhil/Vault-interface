@@ -10,12 +10,12 @@ Vault Interface 提供一套与平台无关的公共元数据接口，包括 Sch
 - [PPF 主页](https://inquirystack.philohub.workers.dev/ppf/) · [仓库](https://github.com/ChongLiuPhil/Personal-Publishing-Framework)
 - [Starter 主页](https://inquirystack.philohub.workers.dev/starter/) · [仓库](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter)
 
-完整栈新项目的默认基线是 **完整 AHICP + 完整 PPF + Vault Interface**，本仓库只提供公共元数据适配层。精简配置（profile）必须由使用者明确选择。私人项目状态继续保留在项目自己的私有空间中。原创或未发布源内容默认 private，同时可以准备 restricted/authenticated 的 Continuous Web。
+完整栈新项目的默认基线是 **完整 AHICP + 完整 PPF + Vault Interface**，本仓库只提供公共元数据适配层。精简配置（profile）必须由使用者明确选择。平台 bootstrap 已 verified 后，首选 infrastructure profile 为 `agent-provisioned-external-ci`；Starter 负责 Request 与编排，真正可执行的 Provider 工作由固定版本 PPF 实现。Verified standing authorization 可以覆盖已批准 scope 内普通 private/restricted setup，而 public release、reader 扩大、domain/DNS、Provider scope 扩大与 paid-plan change 仍由人保留。私人项目状态继续保留在项目自己的私有空间中。原创或未发布源内容默认 private，同时可以准备 restricted/authenticated 的 Continuous Web。
 
 四个公共框架栏目现以 https://inquirystack.philohub.workers.dev/ 的 Cloudflare Worker 为正式入口，GitHub 继续作为权威源文件、版本历史和 CI 平台。原框架 GitHub Pages 站点已停用。Vault Interface 的公共元数据接口仍然保持 provider-neutral；当前选择 Cloudflare 承载网页，并不意味着 Cloudflare 成为元数据契约的一部分。
 
 四个框架站点的迁移遵循 [Cloudflare 公共站点迁移说明](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CLOUDFLARE_PUBLIC_DELIVERY_MIGRATION.zh-CN.md)。
 
-Continuous Web 与 Cloudflare 属于项目级发布事项。部署前请阅读[操作指南](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.zh-CN.md)；本仓库不会授予任何私人内容或提供商账户的访问权。
+Continuous Web 与 Cloudflare 属于项目级发布事项。新项目先阅读[项目自动配置契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/PROJECT_PROVISIONING_CONTRACT.zh-CN.md)，再阅读[操作指南](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/CONTINUOUS_WEB_CLOUDFLARE.zh-CN.md)。本仓库不会授予任何私人内容或 Provider account 的访问权；deployment token 明文也绝不能进入 Vault 公共元数据或 model context。
 
 跨组件工作必须阅读 [权威 Agent 调取契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.zh-CN.md)。公共链接只用于恢复生态关系，不授权私人状态访问。如果 Cloudflare 需要使用者执行界面操作，AI Agent 必须给出编号步骤、完成条件、验证方法和回滚方式。

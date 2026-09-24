@@ -4,7 +4,7 @@
 
 **Public project homepages:** [AHICP](https://inquirystack.philohub.workers.dev/) · [PPF](https://inquirystack.philohub.workers.dev/ppf/) · [Vault Interface](https://inquirystack.philohub.workers.dev/vault-interface/) · [Starter](https://inquirystack.philohub.workers.dev/starter/)
 
-**Ecosystem and agent entrypoint:** [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [canonical agent retrieval contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md)
+**Ecosystem and agent entrypoint:** [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [canonical agent retrieval contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.md) · [project provisioning contract](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/PROJECT_PROVISIONING_CONTRACT.md)
 
 A provider-neutral public metadata interface for describing projects without exposing their private working state.
 
@@ -25,7 +25,7 @@ To combine this interface with AHICP and/or PPF for a new project or an existing
 
 https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
 
-Vault Interface remains responsible only for the public metadata contract; it does not become the project-governance or publication-lifecycle authority.
+Vault Interface remains responsible only for the public metadata contract; it does not become the project-governance, project-provisioning, or publication-lifecycle authority. Starter owns provisioning orchestration, while executable provider infrastructure remains authoritative in the pinned PPF implementation.
 
 ## Licensing
 

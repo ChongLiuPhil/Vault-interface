@@ -4,7 +4,7 @@
 
 **公共项目主页：** [AHICP](https://inquirystack.philohub.workers.dev/) · [PPF](https://inquirystack.philohub.workers.dev/ppf/) · [Vault Interface](https://inquirystack.philohub.workers.dev/vault-interface/) · [Starter](https://inquirystack.philohub.workers.dev/starter/)
 
-**体系与 AI 配置入口：** [docs/ECOSYSTEM.zh-CN.md](docs/ECOSYSTEM.zh-CN.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [权威 Agent 调取契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.zh-CN.md)
+**体系与 AI 配置入口：** [docs/ECOSYSTEM.zh-CN.md](docs/ECOSYSTEM.zh-CN.md) · [ecosystem.yaml](ecosystem.yaml) · [llms.txt](docs/llms.txt) · [权威 Agent 调取契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/AGENT_RETRIEVAL_CONTRACT.zh-CN.md) · [项目自动配置契约](https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter/blob/main/docs/PROJECT_PROVISIONING_CONTRACT.zh-CN.md)
 
 本仓库提供一套**公开、平台无关、可复用**的项目元数据接口，让项目能够对外提供必要描述，而不必公开私人工作状态。
 
@@ -55,7 +55,7 @@ python tools/validate_interface.py --project project.yaml --website website.yaml
 
 https://github.com/ChongLiuPhil/Inquiry-Publishing-Project-Starter
 
-Vault Interface 继续只负责公共元数据接口，不承担项目治理或出版生命周期。
+Vault Interface 继续只负责公共元数据接口，不承担项目治理、项目 Provisioning 或出版生命周期。Starter 负责 Provisioning 编排；真正可执行的 Provider infrastructure 仍以固定版本的 PPF 实现为权威。
 
 ## 许可
 
